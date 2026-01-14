@@ -1,0 +1,16 @@
+# Replit configuration for Market Intelligence Bot
+
+run = "python bot.py"
+entrypoint = "bot.py"
+language = "python3"
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+run = ["python", "bot.py"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
