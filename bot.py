@@ -216,4 +216,12 @@ if __name__ == "__main__":
         sys.exit(1)
     
     print("🚀 Starting Market Intelligence Bot...")
+    
+    # Start keep-alive server for Replit (optional - only if using Replit)
+    try:
+        from keep_alive import keep_alive
+        keep_alive()
+    except ImportError:
+        pass  # keep_alive.py not present, running locally
+    
     bot.run(DISCORD_BOT_TOKEN)
